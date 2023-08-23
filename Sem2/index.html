@@ -1,0 +1,161 @@
+<!-- Вы разрабатываете страницу для отображения информации о товаре. 
+У вас есть объект product, который содержит информацию о товаре,
+ включая название, цену и URL изображения товара. Вам необходимо 
+ отобразить эту информацию на странице с использованием v-bind.
+Добавьте кнопку, которая будет изменять цену товара. При нажатии 
+на кнопку должна генерироваться скидка на товар от 1 до 20% и 
+обновиться цена товара в соответствии с значением скидки -->
+<!--  -->
+<!-- Вы разрабатываете простое приложение для отображения 
+списка пользователей. У вас есть массив объектов users, 
+где каждый объект представляет одного пользователя с его 
+именем и возрастом. Вам необходимо отобразить каждого
+ пользователя из массива в виде списка на странице. -->
+<!-- ---- -->
+<!-- Вы разрабатываете приложение для создания списка покупок.
+  У вас есть массив объектов items, где каждый объект 
+  представляет товар с его названием и количеством.
+   Вам необходимо отобразить список товаров, предоставить 
+   возможность изменять количество каждого товара и отмечать 
+   товары, которые уже куплены. -->
+<!-- - -->
+<!-- Вы разрабатываете приложение для управления 
+   списком контактов. У вас есть форма с полями "Имя", 
+   "Фамилия" и "Email", где пользователь может вводить 
+   информацию о новом контакте. После добавления 
+   контакта он должен отображаться в списке контактов. 
+   Требуется связать форму с данными и отображать 
+   список контактов на странице. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .product_ {
+      border: 1px solid black;
+      padding: 5px;
+      max-width: 250px;
+    }
+  </style>
+  <body>
+    <div id="app" class="demo">
+      <div class="product_">
+        <h2>{{product.name}}</h2>
+        <img width="200" :src="product.url" :alt="product.name" />
+        <p>price-{{product.price}}</p>
+        <button :disabled="isDisabled" @click="discaunt">скидка</button>
+      </div>
+      <hr />
+      <ul>
+        <li v-for="user in users" :key="user.id">
+          Name - {{user.name}}, age - {{user.age}}
+        </li>
+      </ul>
+      <hr />
+      <ul>
+        <li v-for="good in goods" :key="good.id">
+          <input type="text" v-model.number="good.amount" />
+          <label>
+            <input type="checkbox" />
+            {{good.title}}
+          </label>
+        </li>
+      </ul>
+      <hr />
+      <form @submit.prevent="createUser">
+        <label> name - <input v-model="name" type="text" /> </label>
+        <label> lastName - <input v-model="lastName" type="text" /> </label>
+        <label> email - <input v-model="email" type="email" /> </label>
+        <button>addUser</button>
+      </form>
+      <ul>
+        <li v-for="user in contact" :key="user.id">
+          name - {{user.name}}
+          lastName - {{user.lastName}}
+          email - {{user.email}}
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const HelloVueApp = {
+        data() {
+          return {
+            product: {
+              name: "product",
+              price: 1000,
+              url: "https://w.forfun.com/fetch/5c/5c667b51332990f7af3d3b20b4548883.jpeg",
+            },
+            isDisabled: false,
+            users: [
+              {
+                id: 1,
+                name: "Leanne Graham",
+                age: 25,
+              },
+              {
+                id: 2,
+                name: "Ervin Howell",
+                age: 33,
+              },
+              {
+                id: 3,
+                name: "Clementine Bauch",
+                age: 34,
+              },
+              {
+                id: 4,
+                name: "Patricia Lebsack",
+                age: 40,
+              },
+              {
+                id: 5,
+                name: "Chelsey Dietrich",
+                age: 18,
+              },
+            ],
+            goods: [
+              { id: 1, title: "Хлеб", amount: 1 },
+              { id: 2, title: "Молоко", amount: 20 },
+              { id: 3, title: "Соль", amount: 12 },
+              { id: 4, title: "Сахар", amount: 53 },
+            ],
+            name: "",
+            lastName: "",
+            email: "",
+            contact: [],
+          };
+        },
+        methods: {
+          discaunt() {
+            const discauntPercent = Math.floor(Math.random() * 20) + 1;
+            this.product.price =
+              this.product.price - (this.product.price * discauntPercent) / 100;
+            this.isDisabled = !this.isDisabled;
+          },
+          createUser() {
+            const nameTrim = this.name.trim();
+            const lastNameTrim = this.lastName.trim();
+            const emailTrim = this.email.trim();
+            if (nameTrim && lastNameTrim && emailTrim) {
+              const newUser = {
+                id: this.contact.length + 1,
+                name: nameTrim,
+                lastName: lastNameTrim,
+                email: emailTrim,
+              };
+              this.contact.push(newUser);
+              this.name = "";
+              this.lastName = "";
+              this.email = "";
+            }
+          },
+        },
+      };
+      Vue.createApp(HelloVueApp).mount("#app");
+    </script>
+  </body>
+</html>

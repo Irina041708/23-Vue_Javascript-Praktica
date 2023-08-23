@@ -1,0 +1,40 @@
+<!--1. Создать кнопку "Перевернуть". При клике на кнопку текст кнопки, должен перевернуться и отобразиться в обратном порядке. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" class="demo">
+      <button @click="flipOver">{{flipOverText}}</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const DZ1_1 = {
+        data() {
+          return {
+            flipOverText: "Перевернуть",
+            count: 0,
+          };
+        },
+        methods: {
+          flipOver() {
+            if (this.count < 1) {
+              this.count++;
+              this.flipOverText = [...this.flipOverText].reduce(
+                (acc, num) => num + acc
+              );
+            } else {
+              this.count--;
+              this.flipOverText = "Перевернуть";
+            }
+          },
+        },
+      };
+      Vue.createApp(DZ1_1).mount("#app");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style></style>
+  <body>
+ 
+    <div id="app" class="demo">
+      <Counter></Counter>
+      <hr>
+      <Task></Task>
+      <hr>
+      <Sort></Sort>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="components/counter.js"></script>
+    <script src="components/task.js"></script>
+    <script src="components/sort.js"></script>
+    <script>
+      const HelloVueApp = {
+        components: {
+          Counter,Task,Sort
+        },
+      };
+      Vue.createApp(HelloVueApp).mount("#app");
+    </script>
+  </body>
+</html>

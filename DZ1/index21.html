@@ -1,0 +1,37 @@
+<!--2. Есть кнопка "Показать пароль" и поле для ввода пароля. При нажатии на кнопку, пароль 
+  должен либо отобразиться, либо скрыться. Задача на использование v-if -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" class="demo">
+      <form>
+        <input
+          v-if:type="show"
+          v-bind:placeholder="clue"
+          v-model="inputValue"
+        />
+      </form>
+      <button @click="show=!show">Показать пароль</button>
+    </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      const DZ1_2 = {
+        data() {
+          return {
+            show: false,
+            clue: "Введите пароль",
+            inputValue: "",
+          };
+        },
+        methods: {},
+      };
+      Vue.createApp(DZ1_2).mount("#app");
+    </script>
+  </body>
+</html>
