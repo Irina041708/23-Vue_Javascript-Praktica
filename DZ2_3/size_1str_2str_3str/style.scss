@@ -459,7 +459,7 @@ summary::webkit-details-marcer {
   height: 356px;
   background-image: url("img_/str2-blog-section5-background.jpg");
   padding-left: 36.6%;
-  padding-top: 317px;
+  // padding-top: 317px;
   display: flex;
   align-items: end;
   .content {
@@ -564,257 +564,246 @@ summary::webkit-details-marcer {
     }
   }
 }
-.demo {
-  .section7 {
-    background: rgba(255, 255, 255, 1);
-    padding-top: 150px;
-    .top {
-      padding-bottom: 30px;
-      text-align: center;
+// .demo {
+.section7 {
+  background: rgba(255, 255, 255, 1);
+  padding-top: 150px;
+  .top {
+    padding-bottom: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    &__h2 {
+      font-family: DM Serif Display;
+      font-size: 50px;
+      font-weight: 400;
+      line-height: 63px;
+      letter-spacing: 0.02em;
+      color: rgba(41, 47, 54, 1);
+    }
+  }
+  .product-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 28px;
+    .positiion-absolut {
+      position: absolute;
+      z-index: 1;
+      top: 253px;
+      left: 10%;
+      height: 41px;
+      width: 38%;
+      border-radius: 8px 8px 8px 0px;
+      background-color: rgba(244, 240, 236, 1);
+      align-items: center;
       display: flex;
-      justify-content: flex-start;
-      &__h2 {
-        font-family: DM Serif Display;
-        font-size: 50px;
+      justify-content: center;
+      &__a {
+        font-family: Jost;
+        font-size: 16px;
         font-weight: 400;
-        line-height: 63px;
-        letter-spacing: 0.02em;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: rgba(77, 80, 83, 1);
+      }
+    }
+    .product {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 21px;
+      border-radius: 80px;
+      border: 1px solid rgba(231, 231, 231, 1);
+      &__img {
+        width: 100%;
+        height: 290px;
+        &__img1 {
+          height: 290px;
+          width: 100%;
+          border-top-left-radius: 64px;
+          border-top-right-radius: 64px;
+        }
+      }
+      &__content {
+        padding-top: 21px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        &__name {
+          font-family: DM Serif Display;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 31px;
+          color: rgba(41, 47, 54, 1);
+        }
+        &__box-richt {
+          padding-top: 30px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .text {
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: rgba(77, 80, 83, 1);
+          }
+          .img {
+            width: 52px;
+            height: 52px;
+            border-radius: 64px;
+            background: rgb(201, 202, 202);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .img1 {
+              font-size: 40px;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .product:hover {
+      border: 1px solid rgba(231, 231, 231, 1);
+      background-color: rgba(231, 231, 231, 1);
+    }
+    .product:hover .img {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+  .content {
+    padding-top: 51px;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .img {
+      width: 52px;
+      height: 52px;
+      border-radius: 64px;
+      background-color: rgba(255, 255, 255, 1);
+      border: 1px solid rgba(205, 162, 116, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .img1 {
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
         color: rgba(41, 47, 54, 1);
       }
     }
-    .product-box {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-      gap: 28px;
-      .positiion-absolut {
-        position: absolute;
-        z-index: 1;
-        top: 253px;
-        left: 10%;
-        height: 41px;
-        width: 38%;
-        border-radius: 8px 8px 8px 0px;
-        background-color: rgba(244, 240, 236, 1);
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        &__a {
-          font-family: Jost;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          letter-spacing: 0.01em;
-          color: rgba(77, 80, 83, 1);
-        }
-      }
-      .product {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 21px;
-        border-radius: 80px;
-        border: 1px solid rgba(231, 231, 231, 1);
-        &__img {
-          width: 100%;
-          height: 290px;
-          &__img1 {
-            height: 290px;
-            width: 100%;
-            border-top-left-radius: 64px;
-            border-top-right-radius: 64px;
-          }
-        }
-        &__content {
-          padding-top: 21px;
-          width: 100%;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          &__name {
-            font-family: DM Serif Display;
-            font-size: 25px;
-            font-weight: 400;
-            line-height: 31px;
-            color: rgba(41, 47, 54, 1);
-          }
-          &__box-richt {
-            padding-top: 30px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            .text {
-              font-family: Jost;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 24px;
-              color: rgba(77, 80, 83, 1);
-            }
-            .img {
-              width: 52px;
-              height: 52px;
-              border-radius: 64px;
-              background: rgb(201, 202, 202);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              .img1 {
-                font-size: 40px;
-                color: black;
-              }
-            }
-          }
-        }
-      }
-      .product:hover {
-        border: 1px solid rgba(231, 231, 231, 1);
-        background-color: rgba(231, 231, 231, 1);
-      }
-      .product:hover .img {
-        background: rgba(255, 255, 255, 1);
-      }
+    .img:hover {
+      background: rgba(244, 240, 236, 1);
     }
-    .content {
-      padding-top: 51px;
-      padding-bottom: 200px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      .img {
-        width: 52px;
-        height: 52px;
-        border-radius: 64px;
-        background-color: rgba(255, 255, 255, 1);
-        border: 1px solid rgba(205, 162, 116, 1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .img1 {
-          font-family: Jost;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 24px;
-          color: rgba(41, 47, 54, 1);
-        }
-      }
-      .img:hover {
-        background: rgba(244, 240, 236, 1);
-      }
-      .img1:hover {
-        background: rgba(244, 240, 236, 1);
-      }
+    .img1:hover {
+      background: rgba(244, 240, 236, 1);
     }
   }
 }
+// }
 // ---------------3str-blog_details----------------------
 .section8 {
   padding-top: 44px;
   &__background {
     height: 351px;
-    background-image: url(/img_/3str-blog_details-section8-img.png);
+    background-image: url("img_/3str-blog_details-section8-img.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
 .section9 {
-  padding-bottom: 96px;
-  display: flex;
-  flex-direction: row;
-  padding-top: 200px;
-  gap: 4.3%;
-  .div1 {
-    width: 67%;
+  .demo {
+    padding-bottom: 96px;
     display: flex;
-    flex-direction: column;
-    &__block1 {
-      // gap: 41px;
+    flex-direction: row;
+    padding-top: 200px;
+    gap: 4.3%;
+    .div1 {
+      width: 67%;
       display: flex;
       flex-direction: column;
-      &__h1 {
-        font-family: DM Serif Display;
-        font-size: 50px;
-        font-weight: 400;
-        line-height: 63px;
-        color: rgba(41, 47, 54, 1);
-      }
-      &__img {
-        padding-top: 21px;
-        height: 539px;
-        border-radius: 62px;
-        &__img1 {
-          height: 539px;
-          width: 100%;
-        }
-      }
-      &__elem3 {
-        padding-top: 46px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        .data {
-          font-family: Jost;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          letter-spacing: 0.01em;
-          color: rgba(77, 80, 83, 1);
-        }
-        .menu {
-          font-family: Jost;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 24px;
-          letter-spacing: 0.01em;
-          color: rgba(77, 80, 83, 1);
-        }
-      }
-      &__elem4,
-      &__elem5 {
-        padding-top: 48px;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 33px;
-        letter-spacing: 0.01em;
-        color: rgba(77, 80, 83, 1);
-      }
-    }
-    &__block2 {
-      padding-top: 35px;
-      &__background {
-        height: 267px;
-        border-radius: 50px;
-        background: rgba(244, 240, 236, 1);
+      &__block1 {
+        // gap: 41px;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        padding: 53px 0px 53px 0px;
-        &__p1 {
+        &__h1 {
           font-family: DM Serif Display;
-          font-size: 200px;
-          font-style: italic;
+          font-size: 50px;
           font-weight: 400;
-          line-height: 250px;
-          letter-spacing: 0.02em;
-          color: rgba(205, 162, 116, 1);
+          line-height: 63px;
+          color: rgba(41, 47, 54, 1);
         }
-        &__p2 {
-          height: 70px;
-          width: 47%;
-          font-family: DM Serif Display;
-          font-size: 25px;
-          font-style: italic;
-          font-weight: 400;
-          line-height: 31px;
-          letter-spacing: 0.02em;
-          color: rgba(205, 162, 116, 1);
+        &__img {
+          padding-top: 21px;
+          height: 539px;
+          border-radius: 62px;
+          &__img1 {
+            height: 539px;
+            width: 100%;
+          }
+        }
+        &__elem3 {
+          padding-top: 46px;
           display: flex;
-          justify-content: center;
-          .p3 {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .data {
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: rgba(77, 80, 83, 1);
+          }
+          .menu {
+            font-family: Jost;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: rgba(77, 80, 83, 1);
+          }
+        }
+        &__elem4,
+        &__elem5 {
+          padding-top: 48px;
+          font-family: Jost;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 33px;
+          letter-spacing: 0.01em;
+          color: rgba(77, 80, 83, 1);
+        }
+      }
+      &__block2 {
+        padding-top: 35px;
+        &__background {
+          height: 267px;
+          border-radius: 50px;
+          background: rgba(244, 240, 236, 1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 53px 0px 53px 0px;
+          &__p1 {
+            font-family: DM Serif Display;
+            font-size: 200px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 250px;
+            letter-spacing: 0.02em;
+            color: rgba(205, 162, 116, 1);
+          }
+          &__p2 {
             height: 70px;
             width: 47%;
             font-family: DM Serif Display;
@@ -824,38 +813,69 @@ summary::webkit-details-marcer {
             line-height: 31px;
             letter-spacing: 0.02em;
             color: rgba(205, 162, 116, 1);
+            display: flex;
+            justify-content: center;
+            .p3 {
+              height: 70px;
+              width: 47%;
+              font-family: DM Serif Display;
+              font-size: 25px;
+              font-style: italic;
+              font-weight: 400;
+              line-height: 31px;
+              letter-spacing: 0.02em;
+              color: rgba(205, 162, 116, 1);
+            }
           }
         }
       }
-    }
-    &__block3 {
-      padding-top: 21px;
-      display: flex;
-      flex-direction: column;
-      &__h1 {
-        padding-top: 20px;
-        font-family: DM Serif Display;
-        font-size: 50px;
-        font-weight: 400;
-        line-height: 63px;
-        letter-spacing: 0.02em;
-        color: rgba(41, 47, 54, 1);
-      }
-      &__p1 {
-        padding-top: 20px;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 33px;
-        letter-spacing: 0.01em;
-        color: rgba(77, 80, 83, 1);
-      }
-      &__ul {
-        padding-top: 24px;
+      &__block3 {
+        padding-top: 21px;
         display: flex;
-        gap: 32px;
         flex-direction: column;
-        .li {
+        &__h1 {
+          padding-top: 20px;
+          font-family: DM Serif Display;
+          font-size: 50px;
+          font-weight: 400;
+          line-height: 63px;
+          letter-spacing: 0.02em;
+          color: rgba(41, 47, 54, 1);
+        }
+        &__p1 {
+          padding-top: 20px;
+          font-family: Jost;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 33px;
+          letter-spacing: 0.01em;
+          color: rgba(77, 80, 83, 1);
+        }
+        &__ul {
+          padding-top: 24px;
+          display: flex;
+          gap: 32px;
+          flex-direction: column;
+          .li {
+            font-family: Jost;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 33px;
+            letter-spacing: 0.01em;
+            color: rgba(77, 80, 83, 1);
+          }
+        }
+        &__img {
+          padding-top: 44px;
+          height: 365px;
+          width: 100%;
+          .img1 {
+            width: 100%;
+            height: 365px;
+          }
+        }
+        &__p2 {
+          padding-top: 35px;
           font-family: Jost;
           font-size: 22px;
           font-weight: 400;
@@ -864,113 +884,119 @@ summary::webkit-details-marcer {
           color: rgba(77, 80, 83, 1);
         }
       }
-      &__img {
-        padding-top: 44px;
-        height: 365px;
-      }
-      &__p2 {
-        padding-top: 35px;
-        font-family: Jost;
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 33px;
-        letter-spacing: 0.01em;
-        color: rgba(77, 80, 83, 1);
-      }
     }
-  }
-  .div2 {
-    width: 41.6%;
-    display: flex;
-    flex-direction: column;
-    &__h1 {
-      font-family: DM Serif Display;
-      font-size: 25px;
-      font-weight: 400;
-      line-height: 31px;
-      letter-spacing: 0.02em;
-      color: rgba(41, 47, 54, 1);
-    }
-    &__block1 {
-      padding-top: 24px;
+    .div2 {
+      width: 41.6%;
       display: flex;
-      gap: 10px;
-      &__elem1,
-      &__elem2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: rgba(244, 240, 236, 1);
-        width: 11%;
-        height: 41px;
-        padding: 9px 30px 9px 30px;
-        font-family: Jost;
-        font-size: 18px;
+      flex-direction: column;
+      &__h1 {
+        font-family: DM Serif Display;
+        font-size: 25px;
         font-weight: 400;
-        line-height: 23px;
+        line-height: 31px;
         letter-spacing: 0.02em;
         color: rgba(41, 47, 54, 1);
       }
-      &__elem1:hover,
-      &__elem2:hover {
-        color: rgba(255, 255, 255, 1);
-        background: rgba(41, 47, 54, 1);
+      &__block1 {
+        padding-top: 24px;
+       
+        .elem {
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(40%,1fr));
+          gap: 10px;
+          padding-bottom: 41px;
+          &__elem1 {
+            border: none;
+            font: inherit;
+            border-radius: 10px;
+            background: rgba(244, 240, 236, 1);   
+            &__p {
+              padding: 9px 30px 9px 30px;
+              font-family: Jost;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 23px;
+              letter-spacing: 0.02em;
+              color: rgba(41, 47, 54, 1);
+            }
+            .p:hover {
+              color: rgba(255, 255, 255, 1);
+            }
+          }
+          .elem1:hover {
+            color: rgba(255, 255, 255, 1);
+            background: rgba(41, 47, 54, 1);
+          }
+        }
       }
-    }
-    &__block2 {
-      padding-top: 11px;
-      display: flex;
-      gap: 10px;
-      &__elem1,
-      &__elem2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: rgba(244, 240, 236, 1);
-        width: 16%;
-        height: 41px;
-        padding: 9px 30px 9px 30px;
-        font-family: Jost;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 23px;
-        letter-spacing: 0.02em;
-        color: rgba(41, 47, 54, 1);
-      }
-      &__elem1:hover,
-      &__elem2:hover {
-        color: rgba(255, 255, 255, 1);
-        background: rgba(41, 47, 54, 1);
-      }
-    }
-    &__block3 {
-      padding-top: 11px;
-      display: flex;
-      gap: 10px;
-      &__elem1,
-      &__elem2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: rgba(244, 240, 236, 1);
-        width: 20%;
-        height: 41px;
-        padding: 9px 30px 9px 30px;
-        font-family: Jost;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 23px;
-        letter-spacing: 0.02em;
-        color: rgba(41, 47, 54, 1);
-      }
-      &__elem1:hover,
-      &__elem2:hover {
-        color: rgba(255, 255, 255, 1);
-        background: rgba(41, 47, 54, 1);
-      }
+      // &__block2 {
+      //   padding-top: 24px;
+      //   height: 41px;
+      //   .elem {
+      //     display: flex;
+      //     gap: 10px;
+      //     &__elem1 {
+      //       border: none;
+      //       font: inherit;
+      //       border-radius: 10px;
+      //       background: rgba(244, 240, 236, 1);
+      //       width: 40%;
+      //       display: flex;
+      //       align-items: center;
+      //       justify-content: center;
+      //       &__p {
+      //         padding: 9px 30px 9px 30px;
+      //         font-family: Jost;
+      //         font-size: 18px;
+      //         font-weight: 400;
+      //         line-height: 23px;
+      //         letter-spacing: 0.02em;
+      //         color: rgba(41, 47, 54, 1);
+      //       }
+      //       .p:hover {
+      //         color: rgba(255, 255, 255, 1);
+      //       }
+      //     }
+      //     .elem1:hover {
+      //       color: rgba(255, 255, 255, 1);
+      //       background: rgba(41, 47, 54, 1);
+      //     }
+      //   }
+      // }
+      // &__block3 {
+      //   padding-top: 24px;
+      //   height: 41px;
+      //   .elem {
+      //     display: flex;
+      //     gap: 10px;
+      //     &__elem1 {
+      //       border: none;
+      //       font: inherit;
+      //       border-radius: 10px;
+      //       background: rgba(244, 240, 236, 1);
+      //       width: 50%;
+      //       display: flex;
+      //       align-items: center;
+      //       justify-content: center;
+      //       &__p {
+      //         padding: 9px 30px 9px 30px;
+      //         font-family: Jost;
+      //         font-size: 18px;
+      //         font-weight: 400;
+      //         line-height: 23px;
+      //         letter-spacing: 0.02em;
+      //         color: rgba(41, 47, 54, 1);
+      //       }
+      //       .p:hover {
+      //         color: rgba(255, 255, 255, 1);
+      //       }
+      //     }
+      //     .elem1:hover {
+      //       color: rgba(255, 255, 255, 1);
+      //       background: rgba(41, 47, 54, 1);
+      //     }
+      //   }
+      // }
     }
   }
 }
