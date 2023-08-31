@@ -13,9 +13,9 @@ a {
 }
 
 center {
-  padding-left: calc(50% - 960px);
+  padding-left: calc(50% - 570px);
   /*(1140)/2=570  1600/2=800*/
-  padding-right: calc(50% - 960px);
+  padding-right: calc(50% - 570px);
 }
 
 .content {
